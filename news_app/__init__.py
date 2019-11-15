@@ -1,8 +1,8 @@
 from flask import Flask
-# from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap
 from config import config_option
 
-# bootstrap=Bootstrap()
+bootstrap=Bootstrap()
 
 def create_app(config_name):
   '''
@@ -12,7 +12,7 @@ def create_app(config_name):
 
   newsApp.config.from_object(config_option[config_name])
 
-  # bootstrap.init_news(newsApp)
+  bootstrap.init_news(newsApp)
 
 #register blueprint
   from .lead import crucial as lead_blueprint
