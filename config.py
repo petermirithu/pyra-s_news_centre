@@ -4,6 +4,10 @@ class Config:
   '''
   General class with general configurations
   '''
+  BASE_HOME_URL='https://newsapi.org/v2/sources?apiKey={}'
+
+  SEARCH_URL='https://newsapi.org/v2/everything?q={}&apiKey={}'
+
   NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
 
 class ProdConfig(Config):
