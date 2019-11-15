@@ -12,7 +12,7 @@ def create_app(config_name):
 
   newsApp.config.from_object(config_option[config_name])
 
-  bootstrap.init_news(newsApp)
+  bootstrap.init_app(newsApp)
 
 #register blueprint
   from .lead import crucial as lead_blueprint
