@@ -1,5 +1,7 @@
 from flask import render_template,request,redirect,url_for
 from . import crucial
+from ..request import get_sources
+
 
 @crucial.route('/')
 def index():
@@ -8,4 +10,6 @@ def index():
   '''
   title='News_Centre'
 
-  return render_template("index.html",title=title)
+  sources=get_sources()
+
+  return render_template("index.html",title=title,sources=sources)

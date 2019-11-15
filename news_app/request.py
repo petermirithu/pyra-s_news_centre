@@ -24,8 +24,8 @@ def get_sources():
 
     source_results=None
 
-    if source_response['']:
-      source_result_list=source_response['']
+    if source_response['sources']:
+      source_result_list=source_response['sources']
       source_results=process_results(source_result_list)
 
   return source_results   
@@ -43,7 +43,7 @@ def process_results(source_list):
 
     source_object=Source(id,name,language,country)
     source_results.append(source_object)
-    
+
   return source_results  
 
 
