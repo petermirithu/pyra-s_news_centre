@@ -4,6 +4,8 @@ This project was generated with [Python](https://www.python.org/) version 3.8.0 
 
 ![picture](./news_app/static/images/news.png)
 
+To view the site Click [News_Centre](https://pyranewscentre.herokuapp.com/)
+
 ## Author: 
   * Peter Mirithu 
 
