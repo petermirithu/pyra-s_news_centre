@@ -1,2 +1,10 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macro%}
+
+{% block content %}
+<h1>NEWS_ARTICLES</h1>
+<h2>Pyra {{id}}</h2>
+
+<h2>{{source_articles.title}}</h2>
+
+<p>{{source_articles.description}}</p>
+{% endblock content %}

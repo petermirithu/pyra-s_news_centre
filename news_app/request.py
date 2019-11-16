@@ -49,26 +49,46 @@ def process_results(source_list):
   return source_results  
 
 def get_news_article(id):
+  '''
+  function that gets the json response of articles for a specific source
+  '''
   get_news_article=news_article_url.format(id,api_key)
 
   with urllib.request.urlopen(get_news_article) as url:
     source_details=url.read()
     article_response=json.loads(source_details)
 
-    article_object=None
+    article_results=None
 
-    if article_response:
-      id=article_response.get("id")
-      name=article_response.get("name")
-      title=article_response.get("title")
-      description=article_response.get("description")
-      url=article_response.get("url")
-      urlToImage=article_response.get("urlToImage")
-      publishedAt=article_response.get("publishedAt")
+    if article_response['articles']:
+      article_results_list=article_response['articles']
+      article_results=process_article_results(article_results_list)
+
+  return article_results    
+
+def process_article_results(article_list):
+  '''
+  function that processes the articles dictionary information
+  '''
+
+  article_results=[]  
+
+  for article in article_list:    
+      id=article.get("id")
+      name=article.get("name")
+      title=article.get("title")
+      description=article.get("description")
+      url=article.get("url")
+      urlToImage=article.get("urlToImage")
+      publishedAt=article.get("publishedAt")
 
       article_object=Article(id,name,title,description,url,urlToImage,publishedAt)
+      article_results.append(article_object)
 
-  return article_object    
+  return article_results    
+
+
+  
     
 
 

@@ -14,12 +14,12 @@ def index():
 
   return render_template("index.html",title=title,sources=sources_res)
 
-@crucial.route('/articles/<int:id')
-def article(id):
+@crucial.route('/articles/<id>')
+def articles(id):
   '''
   view function that returns news articles for a specific source
   '''
-  articles=get_news_article(id)
-  title=f'{source.title}'
+  source_articles=get_news_article(id)
+  title=f'{source_articles.title}'
 
-  return render_template('articles.html',title=title,articles=articles)
+  return render_template('articles.html',title=title,source_articles=source_articles,id=id)
