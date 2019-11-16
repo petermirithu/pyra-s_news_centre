@@ -1,6 +1,7 @@
 import urllib.request,json
-from news_app.models import source_class
+from news_app.models import source_class,article_class
 
+Article=article_class.Article
 Source=source_class.Source
 
 api_key=None
@@ -54,8 +55,21 @@ def get_news_article(id):
     source_details=url.read()
     article_response=json.loads(source_details)
 
-    source_object=None
-    if
+    article_object=None
+
+    if article_response:
+      id=article_response.get("id")
+      name=article_response.get("name")
+      title=article_response.get("title")
+      description=article_response.get("description")
+      url=article_response.get("url")
+      urlToImage=article_response.get("urlToImage")
+      publishedAt=article_response.get("publishedAt")
+
+      article_object=Article(id,name,title,description,url,urlToImage,publishedAt)
+
+  return article_object    
+    
 
 
 
