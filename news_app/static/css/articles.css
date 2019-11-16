@@ -1,6 +1,7 @@
-.tit{
-  color:green;  
-}
-body{
-  background-color: gray;
+body{  
+  background-image: url("../images/let.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;  
 }

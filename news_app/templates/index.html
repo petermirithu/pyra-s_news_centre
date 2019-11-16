@@ -7,13 +7,16 @@
 {% endblock styles %}
 
 {% block content %}
+
 <div class="home">
 
-<h1 class="head">WELCOME TO NEWS_CENTRE.com</h1>
-<a class="btn btn-success" href="#sources">View Sources</a>
+  <h1 class="head">WELCOME TO NEWS_CENTRE.com</h1>
+  <a class="btn btn-success" href="#sources">View Sources</a>
+
 </div>
+
 <h1 id="sources">News_Sources</h1>
-<ul class="card">
+<ul>
   {{macro.display_Source(sources)}}
 </ul>
 {% endblock content %}%}
