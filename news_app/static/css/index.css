@@ -1,6 +1,6 @@
 body{
   text-align: center;
-  background-image: url("../images/let.jpeg");
+  background-image: url("../images/laptable.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -8,10 +8,17 @@ body{
   
 }
 .home{
-  background-image: url("../images/smoke.jpeg");
+  background-image: url("../images/mac.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   background-attachment: fixed;
-  padding-bottom: 50%;
+  padding-bottom: 45%;
+}
+.head{
+  padding-top: 20px;
+  color: gold;
+}
+#sources{
+  color: gold;
 }
