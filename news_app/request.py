@@ -7,16 +7,17 @@ api_key=None
 base_url=None
 
 def configure_request(newsApp):
-  global api_key,base_url
+  global api_key,base_url,news_article_url
 
   api_key=newsApp.config["NEWS_API_KEY"]
   base_url=newsApp.config["BASE_HOME_URL"]
+  news_article_url=newsApp.config["NEWS_ARTCLE_URL"]
 
-def get_sources(sources):
+def get_sources():
   '''
   function that gets a response from the url which sources
   '''
-  source_url=base_url.format(sources,api_key)
+  source_url=base_url.format(api_key)
 
   with urllib.request.urlopen(source_url) as url:
     source_data=url.read()
@@ -46,6 +47,15 @@ def process_results(source_list):
 
   return source_results  
 
+def get_news_article(id):
+  get_news_article=news_article_url.format(id,api_key)
+
+  with urllib.request.urlopen(get_news_article) as url:
+    source_details=url.read()
+    article_response=json.loads(source_details)
+
+    source_object=None
+    if
 
 
 
