@@ -19,7 +19,8 @@ def articles(id):
   '''
   view function that returns news articles for a specific source
   '''
+  
   source_articles=get_news_article(id)
-  title=f'{source_articles.title}'
+  title='Articles_Centre'
 
   return render_template('articles.html',title=title,source_articles=source_articles,id=id)

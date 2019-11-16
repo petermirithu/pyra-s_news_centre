@@ -1,4 +1,7 @@
+
 {% macro display_Source (source_list) %}
+
+
 
   {% for source in source_list %}
   <div class="col-md-4 card">
@@ -13,3 +16,29 @@
   {% endfor %}
   
 {% endmacro %}
+
+{% macro displayArticles(article_list) %}
+      
+
+  {% for article in article_list %}
+  
+    
+      <div class="col-md-6 mb-3" style="background-color:black;max-width: 540px;margin-left:10px;margin-bottom:10px; height:400px">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{{article.urlToImage}}" class="card-img" alt="Contain a video" style="width:250px">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">{{article.title}}</h5>
+              <p class="card-text" style="word-wrap: break-word">{{article.description}}.</p>
+              <a class="btn btn-success" href="{{article.url}}">Read more</a>
+              <p class="card-text"><small class="text-muted">{{article.publishedAt}}</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  {% endfor %}
+
+{% endmacro%}
