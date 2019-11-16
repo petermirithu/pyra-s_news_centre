@@ -1,0 +1,17 @@
+body{
+  text-align: center;
+  background-image: url("../images/let.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;  
+  
+}
+.home{
+  background-image: url("../images/smoke.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  padding-bottom: 50%;
+}

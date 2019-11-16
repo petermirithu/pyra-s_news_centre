@@ -4,14 +4,15 @@
 
 
   {% for source in source_list %}
-  <div class="col-md-4 card">
-    <h6><b>{{source.name}}</b></h6>
-    <p>Language: {{source.language}}</p>
-    <p>Country: {{source.country}}</p>
 
-    <a class="btn btn-danger" href="/articles/{{source.id}}">View articles</a>
-
-  </div>  
+  <div class="col-md-6" style="background-color:black;opacity:0.8;margin-left:10px;margin-bottom:10px;width:200px; height:170px">                              
+    <h5 class="card-title" style="color:gold"><b>{{source.name}}</b></h5>                          
+    <div class="card-body">              
+      <p class="card-text" style="color:green">Language: {{source.language}}</p>        
+      <p class="card-text"><small class="text-muted">Country: {{source.country}}</small></p>  
+      <a class="btn btn-danger" href="/articles/{{source.id}}">View articles</a>    
+    </div>
+  </div>
 
   {% endfor %}
   
@@ -23,17 +24,17 @@
   {% for article in article_list %}
   
     
-      <div class="col-md-6 mb-3" style="background-color:black;max-width: 540px;margin-left:10px;margin-bottom:10px; height:400px">
+      <div class="col-md-6 mb-3" style="background-color:black;max-width: 540px;margin-left:10px;margin-bottom:10px; height:300px">
         <div class="row">
           <div class="col-md-6">
             <img src="{{article.urlToImage}}" class="card-img" alt="Contain a video" style="width:250px">
+            <h5 class="card-title" style="color:red"><b>{{article.title}}</b></h5>
           </div>
           <div class="col-md-6">
-            <div class="card-body">
-              <h5 class="card-title">{{article.title}}</h5>
-              <p class="card-text" style="word-wrap: break-word">{{article.description}}.</p>
+            <div class="card-body">              
+              <p class="card-text" style="color:gold">{{article.description}}.</p>
               <a class="btn btn-success" href="{{article.url}}">Read more</a>
-              <p class="card-text"><small class="text-muted">{{article.publishedAt}}</small></p>
+              <p class="card-text"><small class="text-muted">Posted on: {{article.publishedAt | truncate(13)}}</small></p>
             </div>
           </div>
         </div>
