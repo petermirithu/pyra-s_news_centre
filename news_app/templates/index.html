@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
 {% block content %}
 <h1>WELCOME TO NEWS_ARTICLE.com</h1>
-
+  {{macro.display_Source(sources)}}
 {% endblock content %}%}

@@ -4,7 +4,7 @@ class Config:
   '''
   General class with general configurations
   '''
-  BASE_HOME_URL='https://newsapi.org/v2/sources?apiKey={}'
+  BASE_HOME_URL='https://newsapi.org/v2/{}?apiKey={}'
 
   SEARCH_URL='https://newsapi.org/v2/everything?q={}&apiKey={}'
 
@@ -25,4 +25,4 @@ class DevConfig(Config):
 config_option= {
   'development':DevConfig,
   'production':ProdConfig
-}  
+  }  

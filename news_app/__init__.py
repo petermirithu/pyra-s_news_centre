@@ -18,6 +18,10 @@ def create_app(config_name):
   from .lead import crucial as lead_blueprint
   newsApp.register_blueprint(lead_blueprint)
 
+#set config function from request
+  from .request import configure_request
+  configure_request(newsApp)
+
   return newsApp
 
 

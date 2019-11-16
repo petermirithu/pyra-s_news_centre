@@ -10,6 +10,6 @@ def index():
   '''
   title='News_Centre'
 
-  sources=get_sources()
+  sources_res=get_sources("sources")
 
-  return render_template("index.html",title=title,sources=sources)
+  return render_template("index.html",title=title,sources=sources_res)

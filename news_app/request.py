@@ -9,14 +9,14 @@ base_url=None
 def configure_request(newsApp):
   global api_key,base_url
 
-  api_key=newsApp.config['NEWS_API_KEY']
-  base_url=newsApp.config['BASE_HOME_URL']
+  api_key=newsApp.config["NEWS_API_KEY"]
+  base_url=newsApp.config["BASE_HOME_URL"]
 
-def get_sources():
+def get_sources(sources):
   '''
   function that gets a response from the url which sources
   '''
-  source_url=base_url.format(api_key)
+  source_url=base_url.format(sources,api_key)
 
   with urllib.request.urlopen(source_url) as url:
     source_data=url.read()
