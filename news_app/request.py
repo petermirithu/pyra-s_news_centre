@@ -1,8 +1,6 @@
 import urllib.request,json
-from news_app.models import source_class,article_class
-
-Article=article_class.Article
-Source=source_class.Source
+from article_class import Article
+from source_class import Source
 
 api_key=None
 base_url=None

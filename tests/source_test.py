@@ -32,7 +32,3 @@ class sourceTest(unittest.TestCase):
     test case to test if article objects take the respective format.instances fro class Article
     '''
     self.assertTrue(isinstance(self.new_article,Article))
-
-
-if __name__== '__main__':
-  unittest.main()
