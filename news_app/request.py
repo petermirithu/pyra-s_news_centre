@@ -1,6 +1,6 @@
 import urllib.request,json
-from article_class import Article
-from source_class import Source
+from .article_class import Article
+from .source_class import Source
 
 api_key=None
 base_url=None

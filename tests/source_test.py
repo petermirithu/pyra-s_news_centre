@@ -1,12 +1,6 @@
 import unittest
-from models import source_class
-from models import article_class
-
-Article=article_class.Article
-
-Source=source_class.Source
-
-
+from news_app.source_class import Source
+from news_app.article_class import Article
 
 class sourceTest(unittest.TestCase):
   '''
