@@ -6,7 +6,7 @@ class sourceTest(unittest.TestCase):
   '''
   class to test behaviour pf the source objects and instances
   '''
-  def setUp(self):
+  def setUp(self): 
     '''
     function to set up a source object before every test
     '''
